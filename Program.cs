@@ -31,17 +31,21 @@ namespace Crud_Operation
             ReadData(_db);
 
 
-            var customer = _db.Customers.Where(a => a.Id == 2)
-                .FirstOrDefault();
+            var customer = _db.Customers.Where(a => a.Id == 2).FirstOrDefault();
             Console.WriteLine();
+            
             Console.WriteLine("----------------------------------------Get Customer Details with condition-------------------------------------");
+            
+            Console.WriteLine();
+            Console.WriteLine("Id\t" + "Name\t" + "Email\t\t\t" + "Location\t" + "Address\t" + "IsActive\t");
+
             if (customer!=null)
             {
-                Console.WriteLine(customer.Id+"\t", customer.Name + "\t", customer.Email + "\t", customer.Location + "\t\t", customer.Address + "\t", customer.IsActive
+                Console.WriteLine(customer.Id+"\t"+ customer.Name + "\t"+customer.Email + "\t\t"+customer.Location + "\t\t"+customer.Address + "\t"+customer.IsActive
                     + "\t");
             }
             //reading data
-            ReadData(_db);
+            //ReadData(_db);
 
 
             Console.WriteLine();
